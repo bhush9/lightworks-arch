@@ -25,5 +25,5 @@ Install newly created package.
 TO DO
 =====
 
-1) Examine dependancy and update PKGBUILD
-2) Upload this to AUR (Am I lazy?)
+1. Examine dependancy and update PKGBUILD
+2. Upload this to AUR (Am I lazy?)
