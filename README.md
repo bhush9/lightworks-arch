@@ -12,7 +12,7 @@ Clone this repo
 
 Change directory to lightworks
   
-    $ cd lightworks
+    $ cd lightworks-arch/lightworks
     
 Make package using makepkg command.
 
@@ -22,3 +22,8 @@ Install newly created package.
 
     $ sudo pacman -U *.pkg.tar.xz
     
+TO DO
+=====
+
+1) Examine dependancy and update PKGBUILD
+2) Upload this to AUR (Am I lazy?)
