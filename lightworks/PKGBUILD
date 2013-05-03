@@ -4,6 +4,7 @@ pkgver=11
 pkgrel=1
 pkgdesc="A non linear video editing software"
 arch=('x86_64')
+license=('custom')
 url=("http://www.lwks.com")
 depends=('curl' 'libgsf' 'libtiff' 'portaudio' 'portaudio_cpp' 'libstdc++5' 'pango' 'pangomm' 'libjpeg-turbo' 'gtk' 'glib2')
 conflicts=("lightworks")
@@ -14,4 +15,5 @@ install=lightworks.install
 package() {
       msg2 "Installing lightworks"
       tar zxvf "${srcdir}"/data.tar.gz -C "$pkgdir"/
+      install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
