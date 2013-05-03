@@ -4,8 +4,8 @@ post_install() {
 
 	echo $((`cat /dev/urandom|od -N1 -An -i` % 2500)) > /usr/share/lightworks/machine.num
 
-	chmod a+rw $allusers/Preferences
-	chmod a+rw "$allusers/Audio Mixes"
+	chmod a+rw /usr/share/lightworks/Preferences
+	chmod a+rw "/usr/share/lightworks/Audio Mixes"
 
   	update-desktop-database -q
   	gtk-update-icon-cache -q -t -f usr/share/icons/hicolor
@@ -18,5 +18,3 @@ post_upgrade() {
 post_remove() {
   post_install $1
 }
-
-
