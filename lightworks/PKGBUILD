@@ -4,7 +4,8 @@ pkgver=11
 pkgrel=1
 pkgdesc="A non linear video editing software"
 arch=('x86_64')
-url=("")
+url=("http://www.lwks.com")
+depends=('curl' 'libgsf' 'libtiff' 'portaudio' 'portaudio_cpp' 'libstdc++5' 'pango' 'pangomm' 'libjpeg-turbo' 'gtk' 'glib2')
 conflicts=("lightworks")
 provides=("lightworks"="11.1")
 source=("http://www.lwks.com/dmpub/lwks-11.1.H-amd64.deb")
