@@ -1,6 +1,20 @@
 post_install() {
-  update-desktop-database -q
-  gtk-update-icon-cache -q -t -f usr/share/icons/hicolor
+	set -e
+	allusers=/usr/share/lightworks
+
+	# Generate a machine number (if there isn't one already)
+	if [ ! -f $allusers/machine.num ];
+	then
+		cat > $allusers/machine.num << EOF
+		$((`cat /dev/urandom|od -N1 -An -i` % 2500))
+		EOF
+	fi
+
+	chmod a+rw $allusers/Preferences
+	chmod a+rw "$allusers/Audio Mixes"
+
+  	update-desktop-database -q
+  	gtk-update-icon-cache -q -t -f usr/share/icons/hicolor
 }
 
 post_upgrade() {
