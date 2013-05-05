@@ -7,6 +7,7 @@ post_install() {
 	mkdir -p /usr/lib/x86_64-linux-gnu/
 	cd /usr/lib/x86_64-linux-gnu/
 	ln -s ../libcurl.so
+	ln -s ../libavcodec.so.53
 
 	chmod a+rw /usr/share/lightworks/Preferences
 	chmod a+rw "/usr/share/lightworks/Audio Mixes"
@@ -20,5 +21,6 @@ post_upgrade() {
 }
 
 post_remove() {
-  post_install $1
+	update-desktop-database -q
+  	gtk-update-icon-cache -q -t -f usr/share/icons/hicolor
 }
