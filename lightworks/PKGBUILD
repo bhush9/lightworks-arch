@@ -7,8 +7,6 @@ arch=('x86_64')
 license=('custom')
 url=("http://www.lwks.com")
 depends=('curl' 'libgsf' 'libtiff4' 'ffmpeg-compat' 'portaudio' 'portaudio_cpp' 'libstdc++5' 'pango' 'pangomm' 'libjpeg-turbo' 'gtk' 'glib2')
-conflicts=("lightworks")
-provides=("lightworks"="11.1")
 source=("http://www.lwks.com/dmpub/lwks-11.1.H-amd64.deb")
 md5sums=('8758d1d95f1b02be244bcf67d4240bc8')
 install=lightworks.install
