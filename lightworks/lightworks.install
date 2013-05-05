@@ -3,6 +3,10 @@ post_install() {
 	allusers=/usr/share/lightworks
 
 	echo $((`cat /dev/urandom|od -N1 -An -i` % 2500)) > /usr/share/lightworks/machine.num
+	
+	mkdir -p /usr/lib/x86_64-linux-gnu/
+	cd /usr/lib/x86_64-linux-gnu/
+	ln -s ../libcurl.so
 
 	chmod a+rw /usr/share/lightworks/Preferences
 	chmod a+rw "/usr/share/lightworks/Audio Mixes"
