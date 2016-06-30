@@ -1,4 +1,4 @@
-lightworks-arch
+lightworks-arch - [UNMAINTENED]
 ===============
 
 Lightworks arch PKGBUILD
